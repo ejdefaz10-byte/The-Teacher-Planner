@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Ultimate Teacher Planner&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link rel="stylesheet" href="style.css"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="script.js" defer&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="toast"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="loginScreen" class="login"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="login-card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Ultimate Teacher Planner ✨&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input id="username" placeholder="Enter your name" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="login()" class="primary"&gt;Enter Planner&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="app" class="app hidden"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;aside class="sidebar"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="logo"&gt;Planner ✨&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;nav&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('dashboard')"&gt;Dashboard&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('planner')"&gt;Planner&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('students')"&gt;Students&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('gradebook')"&gt;Gradebook&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('attendance')"&gt;Attendance&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="showPage('analytics')"&gt;Analytics&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="bottom"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="toggleDarkMode()"&gt;🌙 Theme&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="resetWeek()"&gt;🔄 Reset Week&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="logout()"&gt;Logout&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/aside&gt;</span></p>
+<p class="p1"><span class="s1">&lt;main class="content"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="topbar"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="title" id="pageTitle"&gt;Dashboard&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="dashboard" class="page active"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Dashboard&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="stats" class="grid"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="planner" class="page"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Planner&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input id="plannerInput" placeholder="Task / Lesson..." /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="addPlannerItem()" class="primary"&gt;Add&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="plannerList" class="dropzone"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="students" class="page"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Students&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input id="studentInput" placeholder="Student name..." /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="addStudent()" class="primary"&gt;Add Student&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="studentList"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="gradebook" class="page"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Gradebook&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input id="gradeInput" placeholder="Assignment name..." /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="addGradeItem()" class="primary"&gt;Add Assignment&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="gradeList"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="attendance" class="page"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Attendance&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button onclick="markAttendance()" class="primary"&gt;Mark Today Present&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="attendanceList"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section id="analytics" class="page"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Analytics&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;canvas id="chart"&gt;&lt;/canvas&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="fab" onclick="quickAdd()"&gt;＋&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
+</body>
+</html>
